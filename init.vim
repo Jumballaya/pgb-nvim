@@ -15,6 +15,7 @@
     Plug 'elixir-lang/vim-elixir'
     Plug 'ctrlpvim/ctrlp.vim'
     Plug 'terryma/vim-multiple-cursors'
+    Plug 'mattn/emmet-vim'
 
   call plug#end()
 
@@ -33,11 +34,11 @@
   "Linewrap Indicator
     set colorcolumn=100
   "Theme
-    colorscheme OceanicNext
+    colorscheme gruvbox
     set background=dark
     set linespace=10
     set guifont=Hack:h16
-    let g:airline_theme='oceanicnext'
+    "let g:airline_theme='oceanicnext'
   "Filetype
     filetype plugin indent on
 
@@ -109,7 +110,7 @@
   "NERDTree
     let g:NERDTreeMapHelp="<leader>nth"
     let g:NERDTreeShowHidden=1
-    let g:NERDTreeWinPos = "right"
+    let g:NERDTreeWinPos = "left"
     let g:NERDTreeIgnore = ["\.DS_Store$", "files"]
   "Force relative line #'s in NERDTree
     augroup NERDTree
@@ -128,6 +129,15 @@
     let g:ctrlp_map = '<c-p>'
     let g:ctrlp_cmd = 'CtrlP'
 
+  "Emmet-vim
+    let g:user_emmet_leader_key=','
+    let g:indentLine_enabled = 0
+
 "==================================================================================================
 "Autocommands
   autocmd! BufWritePost * Neomake
+"Make postcss files work with sass
+  autocmd BufRead,BufNewFile *.pcss set filetype=sass
+"Make .mustache, .inc files highlight
+  autocmd BufRead,BufNewFile *.mustache set filetype=php
+  autocmd BufRead,BufNewFile *.inc set filetype=php
