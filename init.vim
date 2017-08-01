@@ -16,6 +16,7 @@
     Plug 'ctrlpvim/ctrlp.vim'
     Plug 'terryma/vim-multiple-cursors'
     Plug 'mattn/emmet-vim'
+    Plug 'wakatime/vim-wakatime'
 
   call plug#end()
 
