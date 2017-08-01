@@ -17,6 +17,7 @@
     Plug 'terryma/vim-multiple-cursors'
     Plug 'mattn/emmet-vim'
     Plug 'wakatime/vim-wakatime'
+    Plug 'mustache/vim-mustache-handlebars'
 
   call plug#end()
 
