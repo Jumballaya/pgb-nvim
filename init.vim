@@ -42,7 +42,6 @@
     set background=dark
     set linespace=10
     set guifont=Go\ Mono
-    let g:airline_theme='oceanicnext'
   "Filetype
     filetype plugin indent on
 
