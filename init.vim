@@ -16,7 +16,6 @@
     Plug 'ctrlpvim/ctrlp.vim'
     Plug 'terryma/vim-multiple-cursors'
     Plug 'mattn/emmet-vim'
-    Plug 'wakatime/vim-wakatime'
     Plug 'mustache/vim-mustache-handlebars'
     Plug 'tomlion/vim-solidity'
     Plug 'evidens/vim-twig'
