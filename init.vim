@@ -19,6 +19,8 @@
     Plug 'wakatime/vim-wakatime'
     Plug 'mustache/vim-mustache-handlebars'
     Plug 'tomlion/vim-solidity'
+    Plug 'evidens/vim-twig'
+    Plug 'fatih/vim-go'
 
   call plug#end()
 
@@ -40,8 +42,8 @@
     colorscheme gruvbox
     set background=dark
     set linespace=10
-    set guifont=Hack:h16
-    "let g:airline_theme='oceanicnext'
+    set guifont=Go\ Mono
+    let g:airline_theme='oceanicnext'
   "Filetype
     filetype plugin indent on
 
