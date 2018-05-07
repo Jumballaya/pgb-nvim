@@ -144,3 +144,5 @@
 "Make .mustache, .inc files highlight
   autocmd BufRead,BufNewFile *.mustache set filetype=php
   autocmd BufRead,BufNewFile *.inc set filetype=php
+"Make all dockerfiles, no matter the suffix, work as a Dockerfile
+  autocmd BufRead,BufNewFile Dockerfile.* set filetype=dockerfile
