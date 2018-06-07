@@ -20,6 +20,7 @@
     Plug 'tomlion/vim-solidity'
     Plug 'evidens/vim-twig'
     Plug 'fatih/vim-go'
+    Plug 'ryanoasis/vim-devicons'
 
   call plug#end()
 
