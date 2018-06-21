@@ -21,6 +21,8 @@
     Plug 'evidens/vim-twig'
     Plug 'fatih/vim-go'
     Plug 'ryanoasis/vim-devicons'
+    Plug 'vim-syntastic/syntastic'
+    Plug 'sbdchd/neoformat'
 
   call plug#end()
 
@@ -28,12 +30,14 @@
 "Formatting Options
   syntax enable
   syntax on
+  set encoding=UTF-8
   set smartcase
   set number
   set autoindent
   set tabstop=2
   set shiftwidth=2
   set softtabstop=2
+  set backupcopy=yes
   "Convert Tabs to Spaces
     set expandtab
   "Linewrap Indicator
@@ -45,6 +49,10 @@
     set guifont=Go\ Mono
   "Filetype
     filetype plugin indent on
+  "StatusLine
+    set statusline+=%#warningmsg#
+    set statusline+=%{SyntasticStatuslineFlag()}
+    set statusline+=%*
 
 "==================================================================================================
 "Preferences
@@ -127,7 +135,7 @@
     let g:EasyMotion_keys = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ01232456789!@#$%^&*()'
 
   "NeoMake
-    let g:neomake_javascript_enabled_makers = ['eslint']
+    "let g:neomake_javascript_enabled_makers = ['eslint']
 
   "CtrlP
     let g:ctrlp_map = '<c-p>'
@@ -137,8 +145,17 @@
     let g:user_emmet_leader_key=','
     let g:indentLine_enabled = 0
 
+  "Syntastic
+    let g:syntastic_always_populate_loc_list = 1
+    let g:syntastic_auto_loc_list = 1
+    let g:syntastic_check_on_open = 1
+    let g:syntastic_check_on_wq = 0
+    let g:syntastic_javascript_checkers = ['eslint']
+    let g:syntastic_javascript_eslint_exe = 'npm run lint --'
+
 "==================================================================================================
 "Autocommands
+  autocmd BufWritePre *.js Neoformat
   autocmd! BufWritePost * Neomake
 "Make postcss files work with sass
   autocmd BufRead,BufNewFile *.pcss set filetype=sass
