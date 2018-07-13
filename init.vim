@@ -153,6 +153,9 @@
     let g:syntastic_javascript_checkers = ['eslint']
     let g:syntastic_javascript_eslint_exe = 'npm run lint --'
 
+  "Vim Go
+  let g:go_fmt_command = "goimports"
+
 "==================================================================================================
 "Autocommands
   autocmd BufWritePre *.js* Neoformat
