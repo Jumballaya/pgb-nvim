@@ -155,7 +155,7 @@
 
 "==================================================================================================
 "Autocommands
-  autocmd BufWritePre *.js Neoformat
+  autocmd BufWritePre *.js* Neoformat
   autocmd! BufWritePost * Neomake
 "Make postcss files work with sass
   autocmd BufRead,BufNewFile *.pcss set filetype=sass
@@ -164,3 +164,5 @@
   autocmd BufRead,BufNewFile *.inc set filetype=php
 "Make all dockerfiles, no matter the suffix, work as a Dockerfile
   autocmd BufRead,BufNewFile Dockerfile.* set filetype=dockerfile
+"Make all servo files follow JavaScript for now
+  autocmd BufRead,BufNewFile *.svo set filetype=js
