@@ -23,6 +23,7 @@
     Plug 'ryanoasis/vim-devicons'
     Plug 'vim-syntastic/syntastic'
     Plug 'sbdchd/neoformat'
+    Plug 'purescript-contrib/purescript-vim'
 
   call plug#end()
 
