@@ -159,6 +159,7 @@
 
 "==================================================================================================
 "Autocommands
+  autocmd BufNewFile,BufRead *.asm set filetype=nasm
   autocmd BufWritePre ~/Documents/projects/**/*.js* Neoformat
   autocmd! BufWritePost * Neomake
 "Make postcss files work with sass
