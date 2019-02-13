@@ -21,9 +21,10 @@
     Plug 'evidens/vim-twig'
     Plug 'fatih/vim-go'
     Plug 'ryanoasis/vim-devicons'
-    Plug 'vim-syntastic/syntastic'
+    "Plug 'vim-syntastic/syntastic'
     Plug 'sbdchd/neoformat'
     Plug 'purescript-contrib/purescript-vim'
+    Plug 'HerringtonDarkholme/yats.vim'
 
   call plug#end()
 
@@ -136,7 +137,7 @@
     let g:EasyMotion_keys = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ01232456789!@#$%^&*()'
 
   "NeoMake
-    "let g:neomake_javascript_enabled_makers = ['eslint']
+    let g:neomake_javascript_enabled_makers = ['eslint']
 
   "CtrlP
     let g:ctrlp_map = '<c-p>'
@@ -147,12 +148,12 @@
     let g:indentLine_enabled = 0
 
   "Syntastic
-    let g:syntastic_always_populate_loc_list = 1
-    let g:syntastic_auto_loc_list = 1
-    let g:syntastic_check_on_open = 1
-    let g:syntastic_check_on_wq = 0
-    let g:syntastic_javascript_checkers = ['eslint']
-    let g:syntastic_javascript_eslint_exe = 'npm run lint --'
+    "let g:syntastic_always_populate_loc_list = 1
+    "let g:syntastic_auto_loc_list = 1
+    "let g:syntastic_check_on_open = 1
+    "let g:syntastic_check_on_wq = 0
+    "let g:syntastic_javascript_checkers = ['eslint']
+    "let g:syntastic_javascript_eslint_exe = 'npm run lint --'
 
   "Vim Go
   let g:go_fmt_command = "goimports"
@@ -161,6 +162,8 @@
 "Autocommands
   autocmd BufNewFile,BufRead *.asm set filetype=nasm
   autocmd BufWritePre ~/Documents/projects/**/*.js* Neoformat
+  autocmd BufWritePre ~/Documents/projects/**/*.mjs* Neoformat
+  autocmd BufWritePre ~/Documents/projects/**/*.ts* Neoformat
   autocmd! BufWritePost * Neomake
 "Make postcss files work with sass
   autocmd BufRead,BufNewFile *.pcss set filetype=sass
@@ -171,3 +174,5 @@
   autocmd BufRead,BufNewFile Dockerfile.* set filetype=dockerfile
 "Make all servo files follow JavaScript for now
   autocmd BufRead,BufNewFile *.svo set filetype=js
+"Make all mjs files to js
+  autocmd BufRead,BufNewFile *.svo set filetype=mjs
