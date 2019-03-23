@@ -175,4 +175,4 @@
 "Make all servo files follow JavaScript for now
   autocmd BufRead,BufNewFile *.svo set filetype=js
 "Make all mjs files to js
-  autocmd BufRead,BufNewFile *.svo set filetype=mjs
+  autocmd BufRead,BufNewFile *.mjs set filetype=js
